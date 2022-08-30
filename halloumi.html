@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cauliflower Steak</title>
+		
+		<!-- Meta Description for Search Engine Results -->
+		<meta name="description" content="Can't decide what to make? Find a great recipe">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Google Fonts integration: http://www.google.com/fonts -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Rubik+Maze&display=swap" rel="stylesheet">		
+
+
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&family=Righteous&display=swap" rel="stylesheet">
+
+		<!-- Normalize to clean up & standardize the browser default styles: http://necolas.github.io/normalize.css/ -->
+		<link rel="stylesheet" href="css/normalize.css">
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript">
+			function CheckOther(val){
+				var element = document.getElementById('cuisineOther');
+				var title = document.getElementById('cuisineOtherTitle');
+				if(val=='Other'){
+					element.style.display='block';
+					title.style.display='block';	
+				}	
+				else
+					element.style.display='none'
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div class="container">		
+			<div class="top">
+				<div class ='col-sm-6' >
+					<p id="logo"><a href="/index.html" title="Main Page">Recipes</a></p>
+				</div>
+
+				<div class="col-sm-6" id="links">
+					<a class="icons" id="twitter" href="https://www.twitter.com">
+						<img src="/images/twitter.png" alt="" width="30">
+					</a>
+					<a class="icons" href="https://www.facebook.com">
+						<img src="/images/facebook.png" alt="" width="30">
+					</a>
+					<a class="icons" id="insta" href="https://www.instagram.com">
+						<img src="/images/instagram.jpeg" alt="" width="35">
+					</a>
+
+					<a class="icons" href="#">
+						<img src="/images/icon.png" alt="" width="30">
+
+						
+
+					</a>
+					<!-- search bar -->
+					<form class="d-flex">
+						<input class="form-control me-2" type="text" placeholder="Search">
+						<button class="btn btn-dark" type="button" id="search">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+			
+		<div class="container">
+			<div class="mainNav">
+				<header class="main">
+					<nav>
+						<ul class="clearfix">
+							<!-- dropdown menu -->
+							<div class="dropdown">
+								<button class="dropbtn">Recipes</button>
+								<div class="dropdown-content">
+									<a href="">Mexican</a>
+									<a href="">Indian</a>
+									<a href="">Asian</a>
+									<a href="">Italian</a>
+								</div>
+							
+							</div>
+
+							<li>
+							<div>
+										<!-- Button trigger modal -->
+								<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" id="userBtn">
+									User Entries
+								</button>
+ 
+								<div class="modal" id="exampleModal">
+									<div class="modal-dialog modal-dialog-centered modal-lg">
+										<div class="modal-content">
+
+											<div class="modal-header">
+												<!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+												</button>
+											</div>
+
+											<div class="modal-body">
+												<form>
+													<fieldset>
+														<legend>
+															<h2>Enter your recipe here:</h2>
+														</legend>
+															<!-- <h3>Recipe Title</h3> -->
+														<label for="recipeTitle" id="recipeName">
+															<h3>Recipe title:</h3>
+														</label> 
+														<input type="text" id="recipeTitle" name="recipeTitle"> <br>
+
+														<label for="recipe" id="recipe">
+															<h3>Recipe:</h3>
+														</label> 
+														<textarea name="recipe" id="recipe" cols="70" rows="3"></textarea>
+
+
+														<br>
+														<label for="cuisine" id="cuisine">
+															<h3>Cuisine:</h3>
+														</label> 
+														<select name="cuisine" id="cuisine" onchange="CheckOther(this.value);">
+															<option>Select a cuisine:</option>
+															<option value="Indian">Indian</option>
+															<option value="Japanese">Japanese</option>
+															<option value="French">French</option>
+															<option value="Thai">Thai</option>
+															<option value="Greek">Greek</option>
+															<option value="Italian">Italian</option>
+															<option value="Other">Other</option>
+														</select>
+
+														<label for="cuisineOtherTitle" id="cuisineOtherTitle" style="display:none;">
+															<h3>Other cuisine:</h3>
+														</label>
+														<input type="text" name="cuisineOther" id="cuisineOther" style="display:none;" />
+												
+
+													
+														<br>
+														<label for="img" id="img">
+															<h3>Upload an Image:</h3>
+														</label> 
+														<input type="file" id="img" name="img" accept="image/*">
+
+													</fieldset>
+													
+												</form>
+											</div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Submit</button>
+											</div>
+										</div>
+									</div>
+								</div>
+						
+							</div>
+							
+							</li>
+							<li><a href="">Extra</a></li>
+							<li><a href="">Shop</a></li>
+							<li><a href="">Contact us</a></li>
+						
+						</ul>
+					</nav>
+				</header>
+			</div>
+		</div><!-- end container -->
+
+
+
+
+
+		<!-- ---------- Recipe Card ---------- -->
+		<div class="container">
+			<div class="recipe-card">
+				<div class="row">
+					<div class='col-sm-1'>
+
+					</div>
+					<div class="col-sm-10" id="recipe-card">
+						<h1>Griddled halloumi with watermelon & caper breadcrumbs</h1>
+						
+						<div class="col-sm-3">
+							<h3><strong> Author: </strong> Diana Henry</h3>
+							<a href="https://www.bbcgoodfood.com/recipes/cauliflower-steaks-roasted-red-pepper-olive-salsa"><h3>Credit: BBC Good Foods</h3></a>
+							<a href="#">Give a rating</a>
+						</div>
+						<div class="col-sm-3">
+							<h3><strong>Prep:</strong> 30 mins</h3>
+							<h3><strong>Cook:</strong> 15 mins</h3>
+							<h3><strong>Difficulty:</strong> Easy</h3>
+							<h3><strong>Servings:</strong> 4</h3>
+						</div>
+
+						<div>
+							<h4>This salad has a great interplay of textures, temperatures and flavours. Toss juicy watermelon with salty cheese, crispy breadcrumbs, capers, almonds and mint.</h4>
+							<a href="#"><button type="button" class="btn btn-dark" id="share">Share!</button></a>
+						</div>
+					
+						<img src="images/cauliflower.webp" alt="">
+
+						<div class="col-sm-4">
+							<h2>Ingredients:</h2>
+							<h3>
+								<ul>
+                                  <li>  750g watermelon</li>
+                                  <li>  2 small shallots , very finely sliced</li>
+                                  <li>  100ml extra virgin olive oil , plus extra for brushing and to serve</li>
+                                  <li>  4 tsp white balsamic vinegar</li>
+                                  <li>  300g halloumi , sliced</li>
+                                  <li>  good squeeze of lemon juice</li>
+								</ul>
+							</h3>
+						</div>
+
+						<div class="col-sm-6">
+							<h2>Recipe:</h2>
+							<h3>
+								<ol>
+                                    <li>  Cut the watermelon into either cubes or slices and transfer to a bowl with the shallots. </li>
+                                    <li>  Add 4 tbsp extra virgin olive oil and the balsamic, then season with fresh black pepper. </li>
+                                    <li>  Cover and put in the fridge for about 15-20 mins.</li>
+
+                                    <li>  Heat the remaining oil in a frying pan. Fry the breadcrumbs until turning gold. </li>
+                                    <li>  Add the garlic, chilli and capers and cook for another minute, then toss in the almonds. </li>
+                                    <li>  Remove from the heat, add the torn mint (it will wilt a little), then taste – it will be quite salty, but the watermelon won’t be, so you’ll get a good contrast.</li>
+
+                                    <li>  Brush the halloumi with a little oil and heat a griddle pan. </li>
+                                    <li>  Griddle the cheese on both sides until just starting to melt but still holding its shape, with nice golden griddle marks. </li>
+                                    <li>  Toss the cold watermelon and shallots with the rest of the mint leaves and some salt. Divide between four plates, or pile onto a platter. </li>
+                                    <li>   Put the hot halloumi on top. Squeeze over some lemon juice and top with some of the breadcrumb and caper mix. Serve immediately.</li>
+								</ol>
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		
+		<div class="container">
+			<div class="mx-auto">
+				<a href="#" class="random">
+					<button type="button" class="btn btn-dark" id="random">
+					Surpise me </button>
+				</a>
+			</div>
+		</div>
+
+		<div class="container">		
+			<div class="mailing-list">
+				<h2>Join our mailing list!</h2>
+				<h3>Get new recipes directly to your inbox</h3>
+				<form autocomplete="on">
+					<label for="email"><h3>Enter your email here:</h3></label><br>
+					<input type="email" id="email" name="email"
+					placeholder="example@email.com"> <br>
+					<!-- <input type="submit" value="Submit">  
+					<input type="reset" value="Reset"> -->
+					<button type="button" class="btn btn-dark">
+						Submit </button>
+					<button type="button" class="btn btn-dark">
+						Reset </button>
+
+
+				</form>
+			</div>
+		</div><!-- end container -->
+		
+
+
+
+		<footer class="main">
+			<div class="container clearfix">
+			
+				<div id="uncopyright">
+					<p> 2022 @ <strong>Anujan Ganeshalingam</strong></p>
+					<a href="https://www.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_18240979.htm#query=modern%20background&position=1&from_view=keyword"> Background image by rawpixel.com on Freepik</a>
+				</div><!-- end uncopyright -->
+				
+				<div id="credits">
+					<a href="https://www.github.com/anujang">GitHub</a><br>
+					<a href="https://www.linkedin.com/in/anujang">LinkedIn</a>
+
+				</div><!-- end credits -->
+				
+			</div><!-- end container -->
+		</footer>
+	</body>
+</html>

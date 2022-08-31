@@ -321,14 +321,6 @@
         max-width: 400px;
     }
 
-    #cuisine{
-        font-size: 18px;
-    }
-
-    #cuisineOtherTitle{
-        padding-top: 0;
-        padding-bottom: 0;
-    }
 
     #cuisineOther{
         margin: auto;
@@ -336,7 +328,6 @@
 
     #img{
         margin:auto;
-        font-size: 16px;
     }
 
     .card{

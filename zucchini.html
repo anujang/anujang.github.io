@@ -41,18 +41,6 @@
 			}
 		</script>
 
-		<script type="text/javascript">
-			function randomSite(){
-				const sites = [
-					'/zucchini.html',
-					'/cauliflower.html',
-					'/halloumi.html'
-				]
-				let randInd = Math.floor(Math.random() * sites.length)
-
-				return (sites[randInd])
-			}
-		</script>
 
 	</head>
 
@@ -207,18 +195,18 @@
 
 					</div>
 					<div class="col-sm-10" id="recipe-card">
-						<h1>Griddled halloumi with watermelon & caper breadcrumbs</h1>
+						<h1>Zucchini Slice</h1>
 						
 						<div class="col-sm-3">
 							<h3><strong> Author: </strong> Diana Henry</h3>
-							<a href="https://www.bbcgoodfood.com/recipes/griddled-halloumi-watermelon-caper-breadcrumbs"><h3>Credit: BBC Good Foods</h3></a>
+							<a href="https://www.budgetbytes.com/zucchini-slice/"><h3>Credit: BBC Good Foods</h3></a>
 							<a href="#">Give a rating</a>
 						</div>
 						<div class="col-sm-3">
-							<h3><strong>Prep:</strong> 30 mins</h3>
-							<h3><strong>Cook:</strong> 15 mins</h3>
+							<h3><strong>Prep:</strong> 15 mins</h3>
+							<h3><strong>Cook:</strong> 45 mins</h3>
 							<h3><strong>Difficulty:</strong> Easy</h3>
-							<h3><strong>Servings:</strong> 4</h3>
+							<h3><strong>Servings:</strong> 8 </h3>
 						</div>
 
 						<div>
@@ -226,18 +214,21 @@
 							<a href="#"><button type="button" class="btn btn-dark" id="share">Share!</button></a>
 						</div>
 					
-						<img src="images/halloumi.webp" alt="">
+						<img src="images/zucchini.jpeg" alt="">
 
 						<div class="col-sm-4">
 							<h2>Ingredients:</h2>
 							<h3>
 								<ul>
-                                  <li>  750g watermelon</li>
-                                  <li>  2 small shallots , very finely sliced</li>
-                                  <li>  100ml extra virgin olive oil , plus extra for brushing and to serve</li>
-                                  <li>  4 tsp white balsamic vinegar</li>
-                                  <li>  300g halloumi , sliced</li>
-                                  <li>  good squeeze of lemon juice</li>
+                                    <li> 1 Tbsp butter </li>
+                                    <li> 2 strips bacon </li>
+                                    <li> 1 yellow onion </li>
+                                    <li> 5 large eggs </li>
+                                    <li> 1 cup shredded cheddar cheese </li>
+                                    <li> 1 cup self-rising flour* </li>
+                                    <li> 1/4 cup olive oil </li>
+                                    <li> 3/4 lb. zucchini (2 cups shredded) </li>
+                                    <li> 1 pinch salt and pepper </li>
 								</ul>
 							</h3>
 						</div>
@@ -246,19 +237,14 @@
 							<h2>Recipe:</h2>
 							<h3>
 								<ol>
-                                    <li>  Cut the watermelon into either cubes or slices and transfer to a bowl with the shallots. </li>
-                                    <li>  Add 4 tbsp extra virgin olive oil and the balsamic, then season with fresh black pepper. </li>
-                                    <li>  Cover and put in the fridge for about 15-20 mins.</li>
-
-                                    <li>  Heat the remaining oil in a frying pan. Fry the breadcrumbs until turning gold. </li>
-                                    <li>  Add the garlic, chilli and capers and cook for another minute, then toss in the almonds. </li>
-                                    <li>  Remove from the heat, add the torn mint (it will wilt a little), then taste – it will be quite salty, but the watermelon won’t be, so you’ll get a good contrast.</li>
-
-                                    <li>  Brush the halloumi with a little oil and heat a griddle pan. </li>
-                                    <li>  Griddle the cheese on both sides until just starting to melt but still holding its shape, with nice golden griddle marks. </li>
-                                    <li>  Toss the cold watermelon and shallots with the rest of the mint leaves and some salt. Divide between four plates, or pile onto a platter. </li>
-                                    <li>   Put the hot halloumi on top. Squeeze over some lemon juice and top with some of the breadcrumb and caper mix. Serve immediately.</li>
-								</ol>
+                                   <li> Preheat the oven to 350ºF and line a large rectangular baking dish (11×7-inch) with parchment paper. </li>
+                                  <li>  Finely dice the onion and finely chop the bacon.</li>
+                                   <li> Heat the butter in a frying pan over medium heat. Add the bacon and onion and cook, stirring regularly, until the onion softens and the bacon is golden. Remove from heat and allow to cool slightly.</li>
+                                  <li>  Grate zucchini into a colander and sprinkle a little salt on top. Set aside.</li>
+                                  <li>  In a large mixing bowl, add the bacon, onion, eggs, cheese, flour, and oil. Stir well to combine.</li>
+                                  <li>  Using your hands, squeeze excess moisture out of the zucchini into the sink, then place into the mixing bowl and stir to combine—season with a little salt and pepper.</li>
+                                  <li>  Pour the mixture into the prepared baking dish. Bake for 35-40 minutes, until cooked through and firm to touch. Allow to cool, then cut into squares to serve.</li>
+                                </ol>
 							</h3>
 						</div>
 
@@ -274,7 +260,7 @@
 		
 		<div class="container">
 			<div class="mx-auto">
-				<a href="javascript:randomSite()" class="random">
+				<a href="/" class="random" id="randSelect" onclick="randomSelect()">
 					<button type="button" class="btn btn-dark" id="random">
 					Surpise me </button>
 				</a>

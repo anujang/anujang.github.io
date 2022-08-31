@@ -41,6 +41,19 @@
 			}
 		</script>
 
+		<script type="text/javascript">
+			function randomSite(){
+				const sites = [
+					'/zucchini.html',
+					'/cauliflower.html',
+					'/halloumi.html'
+				]
+				let randInd = Math.floor(Math.random() * sites.length)
+
+				return (sites[randInd])
+			}
+		</script>
+
 	</head>
 
 	<body>
@@ -259,12 +272,29 @@
 		
 		<div class="container">
 			<div class="mx-auto">
-				<a href="#" class="random">
+				<a href="javascript:randomSite()" class="random">
 					<button type="button" class="btn btn-dark" id="random">
 					Surpise me </button>
 				</a>
 			</div>
 		</div>
+
+
+
+		<script>
+			function randomSelect() {
+				const sites = [
+					'/zucchini.html',
+					'/cauliflower.html',
+		 			'/halloumi.html'
+				];
+				let randInd = Math.floor(Math.random() * sites.length);
+				let randSite = sites[randInd];
+			return randSite
+			}
+			randSelected = randomSelect()
+			document.getElementById('randSelect').href = randSelected
+		</script>
 
 		<div class="container">		
 			<div class="mailing-list">

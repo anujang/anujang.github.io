@@ -41,18 +41,6 @@
 			}
 		</script>
 
-		<script type="text/javascript">
-			function randomSite(){
-				const sites = [
-					'/zucchini.html',
-					'/cauliflower.html',
-					'/halloumi.html'
-				]
-				let randInd = Math.floor(Math.random() * sites.length)
-
-				return (sites[randInd])
-			}
-		</script>
 
 	</head>
 
@@ -272,7 +260,7 @@
 		
 		<div class="container">
 			<div class="mx-auto">
-				<a href="javascript:randomSite()" class="random">
+				<a href="/" class="random" id="randSelect" onclick="randomSelect()">
 					<button type="button" class="btn btn-dark" id="random">
 					Surpise me </button>
 				</a>
@@ -285,8 +273,10 @@
 			function randomSelect() {
 				const sites = [
 					'/zucchini.html',
-					'/cauliflower.html',
-		 			'/halloumi.html'
+		 			'/halloumi.html',
+					 '/prawn.html',
+					'/mushroom.html',
+					'/crab.html'
 				];
 				let randInd = Math.floor(Math.random() * sites.length);
 				let randSite = sites[randInd];
